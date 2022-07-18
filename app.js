@@ -2,13 +2,14 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-app.set('port', process.env.PORT || 3000); //33001¹ø Æ÷Æ® ¾µ²¨ÀÓ
+app.set('port', process.env.PORT || 3000); //33001ë²ˆ í¬íŠ¸ ì“¸êº¼ì„
+app.use(express.static(path.join(__dirname, 'html'))); //publicì— Main.jsë“¤ì–´ ìˆëŠ”ë° ì´ê±° ì•ˆë³´ë‚´ë©´ Main.jsëª» ì½ì–´ì„œ graphë‘ ì—°ê²° ëª»í•¨
 
-app.get('/', (req, res) => {// /¸¦ ÁÖ¼Ò GET ¿äÃ»À¸·Î ¹ŞÀ¸¸é ¾÷·Îµå(¸ŞÀÎÈ­¸é) ÆÄÀÏÀ» º¸³½´Ù
+app.get('/', (req, res) => {// /ë¥¼ ì£¼ì†Œ GET ìš”ì²­ìœ¼ë¡œ ë°›ìœ¼ë©´ ì—…ë¡œë“œ(ë©”ì¸í™”ë©´) íŒŒì¼ì„ ë³´ë‚¸ë‹¤
     res.sendFile(path.join(__dirname, 'html/melon.html'));
 });
 
-//¿¡·¯³ª¸é ¿¡·¯Ã³¸® ÅÛºí¸´ ·»´õ¸µÇØÁÖ±â
+//ì—ëŸ¬ë‚˜ë©´ ì—ëŸ¬ì²˜ë¦¬ í…œë¸”ë¦¿ ë Œë”ë§í•´ì£¼ê¸°
 app.use((err, req, res, next) => {
     res.locals.message = err.message;
     res.locals.error = process.env.NODE_ENV !== 'production' ? err : {};
@@ -16,7 +17,7 @@ app.use((err, req, res, next) => {
     res.render('error');
 });
 
-//Æ÷Æ®¼³Á¤
+//í¬íŠ¸ì„¤ì •
 app.listen(app.get('port'), () => {
-    console.log(app.get('port'), '¹ø Æ÷Æ®¿¡¼­ ´ë±â Áß');
+    console.log(app.get('port'), 'ë²ˆ í¬íŠ¸ì—ì„œ ëŒ€ê¸° ì¤‘');
 });
