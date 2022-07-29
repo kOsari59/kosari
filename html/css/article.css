@@ -1,0 +1,168 @@
+article {
+    margin-top: 75px;
+}
+article .content {
+    margin: 0 auto;
+    padding: 25px;
+    width: 1000px;
+    height: auto;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+article a{
+    color: #000;
+}
+article a:hover {
+    text-decoration: underline;
+}
+
+/* 위쪽 content */
+.tab_rank {
+    overflow: hidden;
+    border-top: 1px solid #838383;
+    border-bottom: 1px solid #d3d3d3;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    
+}
+.tab_rank li {
+    float: left;
+    box-sizing: border-box;
+}
+.tab_rank li a {
+    display: block;
+    height: 40px;
+    width: 100px;
+    line-height: 40px;
+    text-align: center;
+    color: #000;
+
+}
+.tab_rank li a span {
+    padding-right: 25px;
+    border-right: 1px solid #777;
+    font-size: 20px;
+}
+
+ /* article body */
+#abody #alist {
+    width: 600px;
+    float: left;
+    position: relative;
+}
+#abody #alist .select{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100px;
+}
+
+/* 탭 메뉴 */
+.tap_menu {
+    overflow: hidden;
+    background-color: #f5f5f5;
+    margin-top: 10px;
+}
+.tap_menu li {
+    float: left;
+}
+.tap_menu li a {
+    display: block;
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    color: #000;
+    box-sizing: border-box;
+    border-right: 1px solid #777;
+    background-color: aqua;
+}
+
+/* 랭킹 테이블 */
+.table_rank {
+    width: 100%;
+}
+.table_rank th {
+    height: 40px;
+    padding-top: 20px;
+    color: #848484;
+    border-bottom: 1px solid #c9c9c9;
+    text-align: center;
+}
+.table_rank td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.table_rank td.title {
+    overflow: hidden;
+    padding-left: 10px;
+    text-align: left;
+}
+.table_rank .black {
+    padding: 5px;
+}
+.table_rank .line {
+    border-bottom: 3px solid #777;
+    padding-top: 10px;
+}
+
+
+
+/* 우측 메뉴 */
+#abody #assistant {
+    float: right;
+    width: 250px;
+}
+
+.box {
+    position: relative;
+    border: 1px solid #777;
+    margin-bottom: 10px;
+}
+.box h4 {
+    padding: 10px;
+    border-bottom: 1px solid #777;
+}
+.box .right_rank {
+    margin-top: 20px;
+}
+.box .right_rank li {
+    position: relative;
+    height: 22px;
+    padding: 2px 50px 0 30px;
+    margin-top: 5px;
+}
+.box .right_rank li .num {
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 30px;
+    text-align: center;
+}
+.box .right_rank li a {
+    display: block;
+    overflow: hidden;
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.box .right_rank li .change, 
+.box .right_rank li .ratio {
+    position: absolute;
+    top: 1px;
+    right: 0px;
+}
+.box .term {
+    padding: 10px;
+    color: #777;
+    text-align: right;
+}
+
+/* 숫자 색상 */
+.num {
+    background-color: orange;
+}
+
+

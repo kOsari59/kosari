@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 외부 스타일 적용-->
+    <!-- css폴더에 main.css, header.css, section.css 적용-->
+    <link rel="stylesheet" href="css/main.css"> <!-- 전체 css -->
+    <link rel="stylesheet" href="css/header.css"> <!-- header 관련 css -->
+    <link rel="stylesheet" href="css/article.css"> <!-- article 관련 css -->
+</head>
+
+<body>
+    <header>
+        <div class="header-menu">
+            <h3 class="header-left"><a href="/web_copy/page.html">영화 사이트</a></h3>
+
+            <div class="header-right">
+                <ul>
+                    <li><a href="/web_copy/movie_ranking.html" class="menu">영화랭킹</a></li>
+                    <li><a href="/web_copy/actor_ranking.html" class="menu">영화인랭킹</a></li>
+                    <li><a href="/web_copy/웹 프론트엔진 2파트/ch8-1Jquery/project01.html" class="menu">오늘의 시네마 1</a></li>
+                    <li><a href="/web_copy/웹 프론트엔진 2파트/ch8-1Jquery/project02.html" class="menu">오늘의 시네마 2</a></li>
+                    <li><img src="img/다운로드 (1).png" class="header-img header-img-search" /></li>
+                    <li><img src="img/다운로드.png" class="header-img" /></li>
+                </ul>
+            </div>
+        </div>
+        <div class="search">
+            <img src="img/다운로드 (1).png" class="search-img" />
+            <input type="text" class="search-text" placeholder="검색어를 입력하세요">
+            <img src="img/close.png" class="search-close" />
+        </div>
+    </header>
+
+    <article>
+        <!-- content -->
+        <div class="content">
+            <h3>랭킹</h3>
+            <ul class="tab_rank">
+                <li><a href="/web_copy/movie_ranking.html"><span>영화</span></a></li>
+                <li><a href="/web_copy/actor_ranking.html"><span>영화인</span></a></li>
+            </ul>
+            <!-- article body -->
+            <div id="abody">
+                <!-- 좌측 랭킹 -->
+                <div id="alist">
+                    <h4>영화인 랭킹</h4>
+                    <select class="select">
+                        <option value="0">전체</option>
+                        <option value="1">액션</option>
+                        <option value="2">스포츠</option>
+                    </select>
+                    <hr>
+                    <!-- 랭킹 테이블 -->
+                    <table class="table_rank">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="*">
+                            <col width="15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>순위</th>
+                                <th>영화인</th>
+                                <th>변동</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="3" class="black"></td>
+                            </tr>
+                            <tr>
+                                <td class="num">1</td>
+                                <td class="title"><a href="#">최동훈</a></td>
+                                <td class="change">변동없음</td>
+                            </tr>
+                            <tr>
+                                <td class="num">2</td>
+                                <td class="title"><a href="#">박은빈 (Park Eun-Bin)</a></td>
+                                <td class="change">변동없음</td>
+                            </tr>
+                            <tr>
+                                <td class="num">3</td>
+                                <td class="title"><a href="#">김한민</a></td>
+                                <td class="change">변동없음</td>
+                            </tr>
+                            <tr>
+                                <td class="num">4</td>
+                                <td class="title"><a href="#">박찬욱</a></td>
+                                <td class="change">변동없음</td>
+                            </tr>
+                            <tr>
+                                <td class="num">5</td>
+                                <td class="title"><a href="#">톰 크루즈 (Tom Cruise)</a></td>
+                                <td class="change">변동없음</td>
+                            </tr>
+                            <!-- 5개 마다 줄생성 -->
+                            <tr>
+                                <td colspan="3" class="line"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="black"></td>
+                            </tr>
+                            <tr>
+                                <td class="num">6</td>
+                                <td class="title"><a href="#">박훈정 (Park Hoon-Jung)</a></td>
+                                <td class="change">하락</td>
+                            </tr>
+                            <tr>
+                                <td class="num">7</td>
+                                <td class="title"><a href="#">타이카 와이티티 (Taika Waititi)</a></td>
+                                <td class="change">변동없음</td>
+                            </tr>
+                            <tr>
+                                <td class="num">8</td>
+                                <td class="title"><a href="#">제니퍼 코넬리 (Jennifer Connelly)</a></td>
+                                <td class="change">상승</td>
+                            </tr>
+                            <tr>
+                                <td class="num">9</td>
+                                <td class="title"><a href="#">신시아</a></td>
+                                <td class="change">변동없음</td>
+                            </tr>
+                            <tr>
+                                <td class="num">10</td>
+                                <td class="title"><a href="#">한재림 (Han Jae-rim)</a></td>
+                                <td class="change">상승</td>
+                            </tr>
+                            <!-- 5개 마다 줄생성 -->
+                            <tr>
+                                <td colspan="3" class="line"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="black"></td>
+                            </tr>
+                            <tr>
+                                <td class="num">11</td>
+                                <td class="title"><a href="#">서은수</a></td>
+                                <td class="change">하락</td>
+                            </tr>
+                            <tr>
+                                <td class="num">12</td>
+                                <td class="title"><a href="#">탕웨이 (Tang Wei)</a></td>
+                                <td class="change">변동없음</td>
+                            </tr>
+                            <tr>
+                                <td class="num">13</td>
+                                <td class="title"><a href="#">조셉 코신스키 (Joseph Kosinski)</a></td>
+                                <td class="change">변동없음</td>
+                            </tr>
+                            <tr>
+                                <td class="num">14</td>
+                                <td class="title"><a href="#">구로사와 기요시 (Kurosawa Kiyoshi)</a></td>
+                                <td class="change">변동없음</td>
+                            </tr>
+                            <tr>
+                                <td class="num">15</td>
+                                <td class="title"><a href="#">마일즈 텔러 (Miles Teller)</a></td>
+                                <td class="change">변동없음</td>
+                            </tr>
+                            <!-- 5개 마다 줄생성 -->
+                            <tr>
+                                <td colspan="3" class="line"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="black"></td>
+                            </tr>
+                            <tr>
+                                <td class="num">16</td>
+                                <td class="title"><a href="#">최재훈</a></td>
+                                <td class="change">변동없음</td>
+                            </tr>
+                            <tr>
+                                <td class="num">17</td>
+                                <td class="title"><a href="#">오스틴 버틀러 (Austin Butler)</a></td>
+                                <td class="change">상승</td>
+                            </tr>
+                            <tr>
+                                <td class="num">18</td>
+                                <td class="title"><a href="#">아나 데 아르마스 (Ana de Armas)</a></td>
+                                <td class="change">하락</td>
+                            </tr>
+                            <tr>
+                                <td class="num">19</td>
+                                <td class="title"><a href="#">박해일</a></td>
+                                <td class="change">상승</td>
+                            </tr>
+                            <tr>
+                                <td class="num">20</td>
+                                <td class="title"><a href="#">앤서니 루소 (Anthony Russo)</a></td>
+                                <td class="change">하락</td>
+                            </tr>
+                            <!-- 5개 마다 줄생성 -->
+                            <tr>
+                                <td colspan="3" class="line"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="black"></td>
+                            </tr>
+                            <tr>
+                                <td class="num">21</td>
+                                <td class="title"><a href="#">바즈 루어만 (Baz Luhrmann)</a></td>
+                                <td class="change">상승</td>
+                            </tr>
+                            <tr>
+                                <td class="num">22</td>
+                                <td class="title"><a href="#">나탈리 포트만 (Natalie Portman)</a></td>
+                                <td class="change">하락</td>
+                            </tr>
+                            <tr>
+                                <td class="num">23</td>
+                                <td class="title"><a href="#">마동석 (Don Lee)</a></td>
+                                <td class="change">상승</td>
+                            </tr>
+                            <tr>
+                                <td class="num">24</td>
+                                <td class="title"><a href="#">크리스찬 베일 (Christian Bale)</a></td>
+                                <td class="change">하락</td>
+                            </tr>
+                            <tr>
+                                <td class="num">25</td>
+                                <td class="title"><a href="#">송강호 (Song Kang-ho)</a></td>
+                                <td class="change">상승</td>
+                            </tr>
+                            <!-- 5개 마다 줄생성 -->
+                            <tr>
+                                <td colspan="3" class="line"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="black"></td>
+                            </tr>
+                            <tr>
+                                <td class="num">26</td>
+                                <td class="title"><a href="#">조던 필 (Jordan Peele)</a></td>
+                                <td class="change">상승</td>
+                            </tr>
+                            <tr>
+                                <td class="num">27</td>
+                                <td class="title"><a href="#">이상용</a></td>
+                                <td class="change">상승</td>
+                            </tr>
+                            <tr>
+                                <td class="num">28</td>
+                                <td class="title"><a href="#">크리스 헴스워스 (Chris Hemsworth)</a></td>
+                                <td class="change">하락</td>
+                            </tr>
+                            <tr>
+                                <td class="num">29</td>
+                                <td class="title"><a href="#">이서영</a></td>
+                                <td class="change">하락</td>
+                            </tr>
+                            <tr>
+                                <td class="num">30</td>
+                                <td class="title"><a href="#">발 킬머 (Val Kilmer)</a></td>
+                                <td class="change">하락</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 우측 메뉴 -->
+                <div id="assistant">
+                    <!-- 영화 인기 검색어 -->
+                    <div class="box">
+                        <h4>영화 인기 검색어</h4>
+                        <ul class="right_rank">
+                            <li>
+                                <span class="num">1</span>
+                                <a href="#">외계+인 1부</a>
+                                <span class="change">상승</span>
+                            </li>
+                            <li>
+                                <span class="num">2</span>
+                                <a href="#">탑건: 매버릭</a>
+                                <span class="change">하락</span>
+                            </li>
+                            <li>
+                                <span class="num">3</span>
+                                <a href="#">헤어질 결심</a>
+                                <span class="change">변동없음</span>
+                            </li>
+                            <li>
+                                <span class="num">4</span>
+                                <a href="#">토르: 러브 앤 썬더</a>
+                                <span class="change">변동없음</span>
+                            </li>
+                            <li>
+                                <span class="num">5</span>
+                                <a href="#">마녀(魔女) Part2. The Other One</a>
+                                <span class="change">상승</span>
+                            </li>
+                        </ul>
+                        <p class="term">2022-07-22</p>
+                    </div>
+                    <!-- 영화인 인기 검색어 -->
+                    <div class="box">
+                        <h4>영화인 인기 검색어</h4>
+                        <ul class="right_rank">
+                            <li>
+                                <span class="num">1</span>
+                                <a href="#">최동훈</a>
+                                <span class="change">변동없음</span>
+                            </li>
+                            <li>
+                                <span class="num">2</span>
+                                <a href="#">박은빈</a>
+                                <span class="change">변동없음</span>
+                            </li>
+                            <li>
+                                <span class="num">3</span>
+                                <a href="#">김한민</a>
+                                <span class="change">변동없음</span>
+                            </li>
+                            <li>
+                                <span class="num">4</span>
+                                <a href="#">박찬욱</a>
+                                <span class="change">변동없음</span>
+                            </li>
+                            <li>
+                                <span class="num">5</span>
+                                <a href="#">톰 크루즈</a>
+                                <span class="change">변동없음</span>
+                            </li>
+                        </ul>
+                        <p class="term">2022-07-22</p>
+                    </div>
+                    <!-- 박스오피스 -->
+                    <div class="box">
+                        <h4>박스오피스</h4>
+                        <ul class="right_rank">
+                            <li>
+                                <span class="num">1</span>
+                                <a href="#">탑건: 매버릭</a>
+                                <span class="ratio">700,000명</span>
+                            </li>
+                            <li>
+                                <span class="num">2</span>
+                                <a href="#">토르: 러브 앤 썬더</a>
+                                <span class="ratio">400,000명</span>
+                            </li>
+                            <li>
+                                <span class="num">3</span>
+                                <a href="#">헤어질 결심</a>
+                                <span class="ratio">200,000명</span>
+                            </li>
+                            <li>
+                                <span class="num">4</span>
+                                <a href="#">명탐정 코난: 할로윈의 신부</a>
+                                <span class="ratio">150,000명</span>
+                            </li>
+                            <li>
+                                <span class="num">5</span>
+                                <a href="#">범죄도시 2</a>
+                                <span class="ratio">35,000명</span>
+                            </li>
+                        </ul>
+                        <p class="term">2022-07-22</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <script>
+
+        if ($(location).attr('pathname') == "/web_copy/movie_ranking.html") {
+            $(".tab_rank > li").first().find("span").css("color", "#86E57F");
+        } else if ($(location).attr('pathname') == "/web_copy/actor_ranking.html") {
+            $(".tab_rank > li").last().find("span").css("color", "#86E57F");
+        }
+
+        $(".change").each(function () {
+            if ($(this).html() == ("상승")) {
+                $(this).css("backgroundColor", "red");
+            } else if ($(this).html() == "하락") {
+                $(this).css("backgroundColor", "blue");
+            } else if ($(this).html() == "변동없음") {
+                $(this).css("backgroundColor", "gray");
+            }
+        });
+
+    </script>
+
+
+    <script>
+        $(".header-img-search").click(function () {
+            $(".search").css("display", "block");
+        })
+
+        $(".search-close").click(function () {
+            $(".search").css("display", "none");
+        })
+    </script>
+</body>
+
+</html>

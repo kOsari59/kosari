@@ -1,0 +1,108 @@
+/* 3.스와이퍼 css 지정 */
+.swiper {
+    width: auto;
+    height: 600px;
+    text-align: center;
+    z-index: 0;
+
+}
+
+section {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+section h1 {
+    margin: 10px;
+}
+
+.box .list {
+    overflow: hidden;
+}
+
+.box .list li {
+    height: 230px;
+    width: 230px;
+    margin: 10px;
+    padding: 20px;
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    background-color: #1A1A1C;
+}
+
+.box .list li .top {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.box .list li .top span {
+    font-size: 20px;
+    font-weight: 1000;
+    color: #fff;
+}
+
+.box .list li .top img {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #1A1A1C;
+}
+
+.box .list li p {
+    color: #fff;
+}
+
+.box .list li .bottom {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    overflow: hidden;
+}
+
+.box .list li .bottom .movie {
+    display: block;
+    float: left;
+    margin-right: 1px;
+    width: 91px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #777;
+    color: white;
+    box-sizing: border-box;
+    background-color: #111;
+}
+.box .list li .bottom .movie:hover {
+    color: #a7a7a7;
+    cursor: pointer;
+}
+
+.box .list li .bottom .actor {
+    display: block;
+    float: left;
+    margin-left: 1px;
+    width: 91px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #777;
+    color: white;
+    box-sizing: border-box;
+    background-color: #111;
+}
+.box .list li .bottom .actor:hover {
+    color: #a7a7a7;
+    cursor: pointer;
+}
+
+.menu{
+    color: white;
+}
+
+.swiper-slide img{
+    object-fit: contain;
+    height: 100%;
+}
