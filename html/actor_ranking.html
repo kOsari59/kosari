@@ -18,14 +18,14 @@
 <body>
     <header>
         <div class="header-menu">
-            <h3 class="header-left"><a href="/web_copy/page.html">영화 사이트</a></h3>
+            <h3 class="header-left"><a href="main.html">영화 사이트</a></h3>
 
             <div class="header-right">
                 <ul>
-                    <li><a href="/web_copy/movie_ranking.html" class="menu">영화랭킹</a></li>
-                    <li><a href="/web_copy/actor_ranking.html" class="menu">영화인랭킹</a></li>
-                    <li><a href="/web_copy/웹 프론트엔진 2파트/ch8-1Jquery/project01.html" class="menu">오늘의 시네마 1</a></li>
-                    <li><a href="/web_copy/웹 프론트엔진 2파트/ch8-1Jquery/project02.html" class="menu">오늘의 시네마 2</a></li>
+                    <li><a href="movie_ranking.html" class="menu">영화랭킹</a></li>
+                    <li><a href="actor_ranking.html" class="menu">영화인랭킹</a></li>
+                    <li><a href="웹 프론트엔진 2파트/ch8-1Jquery/project01.html" class="menu">오늘의 시네마 1</a></li>
+                    <li><a href="웹 프론트엔진 2파트/ch8-1Jquery/project02.html" class="menu">오늘의 시네마 2</a></li>
                     <li><img src="img/다운로드 (1).png" class="header-img header-img-search" /></li>
                     <li><img src="img/다운로드.png" class="header-img" /></li>
                 </ul>
@@ -43,8 +43,8 @@
         <div class="content">
             <h3>랭킹</h3>
             <ul class="tab_rank">
-                <li><a href="/web_copy/movie_ranking.html"><span>영화</span></a></li>
-                <li><a href="/web_copy/actor_ranking.html"><span>영화인</span></a></li>
+                <li><a href="movie_ranking.html"><span>영화</span></a></li>
+                <li><a href="actor_ranking.html"><span>영화인</span></a></li>
             </ul>
             <!-- article body -->
             <div id="abody">
@@ -368,9 +368,9 @@
 
     <script>
 
-        if ($(location).attr('pathname') == "/web_copy/movie_ranking.html") {
+        if ($(location).attr('pathname') == "/movie_ranking.html") {
             $(".tab_rank > li").first().find("span").css("color", "#86E57F");
-        } else if ($(location).attr('pathname') == "/web_copy/actor_ranking.html") {
+        } else if ($(location).attr('pathname') == "/actor_ranking.html") {
             $(".tab_rank > li").last().find("span").css("color", "#86E57F");
         }
 

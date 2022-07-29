@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 외부 스타일 적용-->
+    <!-- css폴더에 main.css, header.css, section.css 적용-->
+    <link rel="stylesheet" href="css/main.css"> <!-- 전체 css -->
+    <link rel="stylesheet" href="css/header.css"> <!-- header 관련 css -->
+    <link rel="stylesheet" href="css/section.css"> <!-- section 관련 css -->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-menu">
+            <h3 class="header-left"><a href="main.html">영화 사이트</a></h3>
+            <div class="header-right">
+                <ul>
+                    <li><a href="movie_ranking.html" class="menu">영화랭킹</a></li>
+                    <li><a href="actor_ranking.html" class="menu">영화인랭킹</a></li>
+                    <li><a href="웹 프론트엔진 2파트/ch8-1Jquery/project01.html" class="menu">오늘의 시네마 1</a></li>
+                    <li><a href="웹 프론트엔진 2파트/ch8-1Jquery/project02.html" class="menu">오늘의 시네마 2</a></li>
+                    <li><img src="img/다운로드 (1).png" class="header-img header-img-search" /></li>
+                    <li><img src="img/다운로드.png" class="header-img" /></li>
+                </ul>
+            </div>
+        </div>
+        <div class="search">
+            <img src="img/다운로드 (1).png" class="search-img" />
+            <input type="text" class="search-text" placeholder="검색어를 입력하세요">
+            <img src="img/close.png" class="search-close" />
+        </div>
+    </header>
+
+    <section>
+
+        <!-- 2. 스와이퍼 레이아웃 -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper aaaa">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="img/f1.jpg"></div>
+                <div class="swiper-slide"><img src="img/f2.jpg"></div>
+                <div class="swiper-slide"><img src="img/f3.jpg"></div>
+                <div class="swiper-slide"><img src="img/f4.jpg"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+
+        <!-- 4.스와이퍼 js -->
+        <script>
+
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal',/* 수직, 수평 */
+                loop: true,/* 무한 루프 */
+
+                /* 자동 제생 */
+                autoplay: {
+                    delay: 1000,
+                    /* pauseOnMouseEnter : ture, */
+                    disableOnInteraction: false,/* 상호작용 후 자동재생 */
+                },
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true, /* 클릭옵션 */
+                    type: 'fraction', /* 타입 */
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                // scrollbar: {
+                //     el: '.swiper-scrollbar',
+                // },
+            });
+        </script>
+
+        <!--  -->
+        <h1>추천하는 제품</h1>
+        <div class="box">
+            <ul class="list">
+                <li>
+                    <div class="top">
+                        <span>탐건</span>
+                        <img src="img/movie.jpg" alt="아이콘">
+                    </div>
+                    <p>한순간의 실수도 용납되지 않는 하늘 위,
+                        가장 압도적인 비행이 시작된다!</p>
+                    <div class="bottom">
+                        <a href="#" class="movie">영화</a>
+                        <a href="#" class="actor">영화인</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="top">
+                        <span>외계+인 1부</span>
+                        <img src="img/movie.jpg" alt="아이콘">
+                    </div>
+                    <p>“아주 오래전부터 외계인은 그들의 죄수를
+                        인간의 몸에 가두어 왔다”</p>
+                    <div class="bottom">
+                        <a href="#" class="movie">영화</a>
+                        <a href="#" class="actor">영화인</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="top">
+                        <span>헤어질 결심</span>
+                        <img src="img/movie.jpg" alt="아이콘">
+                    </div>
+                    <p>산 정상에서 추락한 한 남자의 변사 사건.
+                        담당 형사 '해준'(박해일)은
+                        사망자의 아내 '서래'(탕웨이)와 마주하게 된다.</p>
+                    <div class="bottom">
+                        <a href="#" class="movie">영화</a>
+                        <a href="#" class="actor">영화인</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="top">
+                        <span>토르</span>
+                        <img src="img/movie.jpg" alt="아이콘">
+                    </div>
+                    <p>"신을 죽이는 자, 신이 상대한다!"</p>
+                    <div class="bottom">
+                        <a href="#" class="movie">영화</a>
+                        <a href="#" class="actor">영화인</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="top">
+                        <span>마녀(魔女)Part2</span>
+                        <img src="img/movie.jpg" alt="아이콘">
+                    </div>
+                    <p>통제불능의 존재가 세상 밖으로 나왔다!</p>
+                    <div class="bottom">
+                        <a href="#" class="movie">영화</a>
+                        <a href="#" class="actor">영화인</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="top">
+                        <span>범죄도시2</span>
+                        <img src="img/movie.jpg" alt="아이콘">
+                    </div>
+                    <p>“느낌 오지? 이 놈 잡아야 하는 거”</p>
+                    <div class="bottom">
+                        <a href="#" class="movie">영화</a>
+                        <a href="#" class="actor">영화인</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="top">
+                        <span>한산: 용의 출현</span>
+                        <img src="img/movie.jpg" alt="아이콘">
+                    </div>
+                    <p>나라의 운명을 바꿀 압도적 승리의 전투가 시작된다!</p>
+                    <div class="bottom">
+                        <a href="#" class="movie">영화</a>
+                        <a href="#" class="actor">영화인</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="top">
+                        <span>더 킬러</span>
+                        <img src="img/movie.jpg" alt="아이콘">
+                    </div>
+                    <p>평화를 위해 다시 시작된 킬러 본능!</p>
+                    <div class="bottom">
+                        <a href="#" class="movie">영화</a>
+                        <a href="#" class="actor">영화인</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        $(".header-img-search").click(function(){
+            $(".search").css("display","block");
+        })
+        
+        $(".search-close").click(function(){
+            $(".search").css("display","none");
+        })
+    </script>
+</body>
+
+</html>
